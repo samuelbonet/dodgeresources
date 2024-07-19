@@ -3,7 +3,7 @@
   <br>
 <a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/25f1Nmmz/logo.png' border='0' alt='logo'/></a>
 
-SamusCorp
+Dodge Resources
   <br>
 </h1>
 

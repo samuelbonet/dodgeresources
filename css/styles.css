@@ -229,5 +229,15 @@ button:focus {
   .container2 .box-container .box .content .icons span{
     font-size: 12px;
   }
+}
 
+
+.navbar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.navbar-brand img {
+  height: 50px;
+  width: auto;
 }

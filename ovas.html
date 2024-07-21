@@ -59,16 +59,16 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/o1.png" alt="">
+            <img src="images/ovas/ubuntu.jpg" alt="">
          </div>
          <div class="content">
-            <h3>Ubuntu 20.04</h3>
-            <p>Ubuntu 20.04 ova <br>
+            <h3>Ubuntu</h3>
+            <p>
                User:usuario<br>
                Password:usuario
             </p>
          
-            <a href="https://drive.google.com/file/d/1I3Wr9LoGJ7MGDzwcLggA_HI1ax8MDbjp/view?usp=sharing" class="btn">download</a>
+            <a href="https://descargarmaquinasvirtuales.com/distribuciones/ubuntu/" class="btn">Download</a>
             <div class="icons">
             </div>
          </div>
@@ -76,20 +76,149 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/o2.png" alt="">
+            <img src="images/ovas/ubuntuserver.png" alt="">
          </div>
          <div class="content">
-            <h3>Ubuntu 20.04 server</h3>
-            <p>Ubuntu 20.04 server ova <br>
+            <h3>Ubuntu server</h3>
+            <p>
                User:usuario<br>
                Password:usuario
             </p>
          
-            <a href="https://drive.google.com/file/d/1d9sIFY5bAtarYcu_9m3dC65vAFhM8f6F/view?usp=sharing" class="btn">download</a>
+            <a href="https://descargarmaquinasvirtuales.com/distribuciones/ubuntu/" class="btn">Download</a>
             <div class="icons">
             </div>
          </div>
       </div>
+
+      <div class="box">
+        <div class="image">
+           <img src="images/ovas/kali.png" alt="">
+        </div>
+        <div class="content">
+           <h3>Kali</h3>
+           <p>
+              User:usuario<br>
+              Password:usuario
+           </p>
+        
+           <a href="https://descargarmaquinasvirtuales.com/distribuciones/kali-linux/" class="btn">Download</a>
+           <div class="icons">
+           </div>
+        </div>
+     </div>
+
+     <div class="box">
+      <div class="image">
+         <img src="images/ovas/centos.jpg" alt="">
+      </div>
+      <div class="content">
+         <h3>CentOS</h3>
+         <p>
+            User:root &
+            Password:root<br>
+            User:usuario &
+            Password:usuario
+         </p>
+      
+         <a href="https://descargarmaquinasvirtuales.com/distribuciones/centos/" class="btn">Download</a>
+         <div class="icons">
+         </div>
+      </div>
+   </div>
+
+   <div class="box">
+    <div class="image">
+       <img src="images/ovas/centosserver.png" alt="">
+    </div>
+    <div class="content">
+       <h3>CentOS server</h3>
+       <p>
+        User:root &
+        Password:root<br>
+        User:usuario &
+        Password:usuario
+     </p>
+    
+       <a href="https://descargarmaquinasvirtuales.com/distribuciones/centos/" class="btn">Download</a>
+       <div class="icons">
+       </div>
+    </div>
+ </div>
+
+ <div class="box">
+  <div class="image">
+     <img src="images/ovas/debian.jpg" alt="">
+  </div>
+  <div class="content">
+     <h3>Debian</h3>
+     <p>
+      User:root &
+      Password:root<br>
+      User:usuario &
+      Password:usuario
+   </p>
+  
+     <a href="https://descargarmaquinasvirtuales.com/distribuciones/debian/" class="btn">Download</a>
+     <div class="icons">
+     </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="image">
+     <img src="images/ovas/debianserver.jpg" alt="">
+  </div>
+  <div class="content">
+     <h3>Debian server</h3>
+     <p>
+      User:root &
+      Password:root<br>
+      User:usuario &
+      Password:usuario
+   </p>
+  
+     <a href="https://descargarmaquinasvirtuales.com/distribuciones/debian/" class="btn">Download</a>
+     <div class="icons">
+     </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="image">
+     <img src="images/ovas/fedora.jpg" alt="">
+  </div>
+  <div class="content">
+     <h3>Fedora</h3>
+     <p>
+      User:root &
+      Password:root<br>
+      User:usuario &
+      Password:usuario
+   </p>
+  
+     <a href="https://descargarmaquinasvirtuales.com/distribuciones/fedora/" class="btn">Download</a>
+     <div class="icons">
+     </div>
+  </div>
+</div>
+
+<div class="box">
+  <div class="image">
+     <img src="images/ovas/mint.jpg" alt="">
+  </div>
+  <div class="content">
+     <h3>Mint</h3>
+     <p>
+        User:usuario<br>
+        Password:usuario
+     </p>
+  
+     <a href="https://descargarmaquinasvirtuales.com/distribuciones/linux-mint/" class="btn">Download</a>
+     <div class="icons">
+     </div>
+  </div>
+</div>
 
       
 
@@ -100,22 +229,31 @@
 </div>
 
 <script>
+  let loadMoreBtn = document.querySelector('#load-more');
+  let currentItem = 3;
 
-let loadMoreBtn = document.querySelector('#load-more');
-let currentItem = 3;
+  loadMoreBtn.onclick = () => {
+      let boxes = [...document.querySelectorAll('.container2 .box-container .box')];
+      let maxItems = Math.min(currentItem + 3, boxes.length);
+      for (let i = currentItem; i < maxItems; i++) {
+          boxes[i].style.display = 'inline-block';
+      }
+      currentItem += 3;
 
-loadMoreBtn.onclick = () =>{
-   let boxes = [...document.querySelectorAll('.container .box-container .box')];
-   for (var i = currentItem; i < currentItem + 3; i++){
-      boxes[i].style.display = 'inline-block';
-   }
-   currentItem += 3;
+      if (currentItem >= boxes.length) {
+          loadMoreBtn.style.display = 'none';
+      }
+  }
 
-   if(currentItem >= boxes.length){
-      loadMoreBtn.style.display = 'none';
-   }
-}
-
+  // Inicializa los primeros 3 elementos visibles
+  document.addEventListener('DOMContentLoaded', () => {
+      let boxes = [...document.querySelectorAll('.container2 .box-container .box')];
+      for (let i = 0; i < 3; i++) {
+          if (i < boxes.length) {
+              boxes[i].style.display = 'inline-block';
+          }
+      }
+  });
 </script>
 
 </body>

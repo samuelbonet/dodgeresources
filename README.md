@@ -1,14 +1,11 @@
 
 <h1 align="center">
   <br>
-<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/25f1Nmmz/logo.png' border='0' alt='logo'/></a>
+<a href='https://postimages.org/' target='_blank'><img src='https://i.postimg.cc/qMxSNXVq/logo.png' border='0' alt='logo'/></a>
 
 Dodge Resources
   <br>
 </h1>
-
-
-[![cap1.png](https://i.postimg.cc/wB7RV86q/cap1.png)](https://postimg.cc/wtYBqryZ)
 
 ## Descripción
 

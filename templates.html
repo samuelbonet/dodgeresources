@@ -104,7 +104,7 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/t4.png" alt="">
+            <img src="images/template4.png" alt="">
          </div>
          <div class="content">
             <h3>Carousel Template</h3>
@@ -147,14 +147,14 @@
 
       <div class="box">
          <div class="image">
-            <img src="images/template6.png" alt="">
+            <img src="images/template7.png" alt="">
          </div>
          <div class="content">
-            <h3>Cards Template</h3>
-            <p>Animated Cards </p>
-            <a href="https://github.com/webtutorialsw/css_sliding_cards" class="btn">Download</a>
+            <h3>Portfolio Template</h3>
+            <p>Personal portfolio </p>
+            <a href="https://github.com/inamurrehman420/portfolio" class="btn">Download</a>
             <div class="icons">
-               <span> <i class="fas fa-user"></i> by webtutorialsw </span>
+               <span> <i class="fas fa-user"></i> by inamurrehman420 </span>
             </div>
          </div>
       </div>
@@ -166,22 +166,31 @@
 </div>
 
 <script>
+   let loadMoreBtn = document.querySelector('#load-more');
+   let currentItem = 3;
 
-let loadMoreBtn = document.querySelector('#load-more');
-let currentItem = 3;
+   loadMoreBtn.onclick = () => {
+       let boxes = [...document.querySelectorAll('.container2 .box-container .box')];
+       let maxItems = Math.min(currentItem + 3, boxes.length);
+       for (let i = currentItem; i < maxItems; i++) {
+           boxes[i].style.display = 'inline-block';
+       }
+       currentItem += 3;
 
-loadMoreBtn.onclick = () =>{
-   let boxes = [...document.querySelectorAll('.container2 .box-container .box')];
-   for (var i = currentItem; i < currentItem + 3; i++){
-      boxes[i].style.display = 'inline-block';
+       if (currentItem >= boxes.length) {
+           loadMoreBtn.style.display = 'none';
+       }
    }
-   currentItem += 3;
 
-   if(currentItem >= boxes.length){
-      loadMoreBtn.style.display = 'none';
-   }
-}
-
+   // Inicializa los primeros 3 elementos visibles
+   document.addEventListener('DOMContentLoaded', () => {
+       let boxes = [...document.querySelectorAll('.container2 .box-container .box')];
+       for (let i = 0; i < 3; i++) {
+           if (i < boxes.length) {
+               boxes[i].style.display = 'inline-block';
+           }
+       }
+   });
 </script>
 
 </body>
